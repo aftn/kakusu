@@ -1,0 +1,23 @@
+{
+  "name": "KaKuSu",
+  "short_name": "KaKuSu",
+  "description": "クライアントサイド暗号化 Google Drive",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512 1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon.png",
+      "sizes": "512x512 1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client; style-src 'self' 'unsafe-inline'; connect-src 'self' blob: https://www.googleapis.com https://oauth2.googleapis.com https://accounts.google.com; img-src 'self' data: blob: https://lh3.googleusercontent.com https://*.googleusercontent.com https://*.google.com https://*.gstatic.com; media-src 'self' blob:; frame-src blob: https://accounts.google.com; object-src blob:; worker-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; manifest-src 'self'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 0
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cache-Control: no-cache

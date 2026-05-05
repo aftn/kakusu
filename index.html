@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client; style-src 'self' 'unsafe-inline'; connect-src 'self' blob: https://www.googleapis.com https://oauth2.googleapis.com https://accounts.google.com; img-src 'self' data: blob: https://lh3.googleusercontent.com https://*.googleusercontent.com https://*.google.com https://*.gstatic.com; media-src 'self' blob:; frame-src blob: https://accounts.google.com; object-src blob:; worker-src 'self'; base-uri 'self'; form-action 'self'; manifest-src 'self'"
+    />
+    <meta name="description" content="KaKuSu はブラウザ内で完結するクライアントサイド暗号化 Google Drive アプリです。" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./icon.png" />
+    <link rel="apple-touch-icon" href="./icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>KaKuSu</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

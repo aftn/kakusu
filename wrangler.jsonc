@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "kakusu",
+  // account_id は環境変数 CLOUDFLARE_ACCOUNT_ID で設定してください
+  "compatibility_date": "2026-04-01",
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  },
+  "build": {
+    "command": "npm run build"
+  }
+  // カスタムドメインを使う場合:
+  // "routes": [{ "pattern": "your-domain.example.com", "custom_domain": true }]
+}

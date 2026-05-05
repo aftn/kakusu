@@ -1,0 +1,58 @@
+{
+  "name": "kakusu",
+  "private": true,
+  "version": "1.0.0",
+  "author": "aftn (https://aftn.jp)",
+  "license": "AGPL-3.0-only",
+  "homepage": "https://app.kakusu.jp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aftn/kakusu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aftn/kakusu/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "predev": "npm run generate:licenses",
+    "dev": "vite",
+    "prebuild": "npm run generate:licenses",
+    "build": "tsc -b && vite build",
+    "deploy:pages": "wrangler pages deploy dist",
+    "deploy:workers": "wrangler deploy",
+    "generate:licenses": "license-checker-rseidelsohn --start . --excludePrivatePackages --plainVertical --out public/oss-licenses.txt",
+    "preview": "vite preview",
+    "lint": "eslint . && biome check .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "idb": "^8.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@eslint/js": "^9.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "globals": "^15.0.0",
+    "jsdom": "^29.0.2",
+    "license-checker-rseidelsohn": "^4.4.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.7.0",
+    "typescript-eslint": "^8.0.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0",
+    "wrangler": "^4.77.0"
+  }
+}

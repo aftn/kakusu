@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* カスタムスクロールバー — overlay 風で位置ずれを防止 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.4) transparent;
+}
+.dark * {
+  scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+}
+html {
+  overflow-y: auto;
+  overflow-y: overlay; /* Chromium/WebKit: スクロールバーがコンテンツに重なり、レイアウトを押さない */
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.6);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+/*
+ * マウスボタンを押している間、未選択ファイルアイテムの hover エフェクトを抑制する。
+ * body[data-mousedown] は VaultPage の mousedown/mouseup で管理される。
+ * 選択済み (data-selected) のアイテムは除外する。
+ */
+body[data-mousedown] [data-file-item]:not([data-selected]):hover {
+  background-color: transparent !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+}
+
+/* Vaultページ全体のテキスト選択を無効化し、入力欄のみ許可 */
+[data-vault-page] {
+  user-select: none;
+  -webkit-user-select: none;
+}
+[data-vault-page] input,
+[data-vault-page] textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
